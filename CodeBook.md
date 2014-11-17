@@ -1,0 +1,29 @@
+#CodeBook
+
+- *trainX* is the data loaded from X_train.txt
+- *trainy* is the data loaded from y_train.txt
+- *trainSubject* is the data loaded from subject_train.txt
+- *textX* is the data loaded from X_test.txt
+- *testy* is the data loaded from y_test.txt
+- *testSubject* is the data loaded from subject_test.txt
+- *features* is the data loaded from features.txt
+- *activity_labels* is the data loaded from activity_labels.txt
+- *Xdata* is *trainX* row binded to *testX*
+- *ydata* is *trainy* row binded to *testy*
+- *subjects* is *trainSubject* row binded to *testSubject*
+- *activities* is *ydata* replaced by the appropriate labels from *activity_labels*
+- Column names of *Xdata* are replaced by the appropriate labels from *features*
+- Column name of *subjects* is changed to "Subject"
+- All columns that don't include "mean()" or "std()" are removed from *Xdata*
+- *data* is *subjects* column binded to *activities* column binded to *Xdata*
+- activities column of *data* is renamed to "Activity"
+- *data* is ordered by subject and activity
+- *avgData* is *data* (without Subject and Activity columns) split by the Subject and Activity columns
+- *avgData* has mean applied to each column of each list and combined back together
+- *avgData* is transposed
+- *splitNames* is rownames of *avgData* split by '.'
+- *subjectList* is vector of subjects from *splitNames*
+- *activityList* is vector of activities from *splitNames*
+- *avgData* is *subjectList* column binded to *activityList* column binded to *avgData*
+- subjectList and activityList columns of *avgData* are renamed to "Subject" and "Activity"
+- Row names of *avgData* are set to NULL
