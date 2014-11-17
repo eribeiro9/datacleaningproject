@@ -1,8 +1,6 @@
 #datacleaningproject
-===================
 
 ####The course project for Getting and Cleaning Data
-
 
 run_analysis.R combines several data files to make a tidy data set.
 These files include:
